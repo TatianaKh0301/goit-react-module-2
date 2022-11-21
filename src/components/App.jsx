@@ -1,3 +1,6 @@
+// import Counter from 'components/Counter/Counter';
+import Dropdown from 'components/Dropdown/Dropdown';
+
 export const App = () => {
   return (
     <div
@@ -10,7 +13,8 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React homework template
+      {/* <Counter initialValue={10}/> */}
+      <Dropdown />
     </div>
   );
 };
