@@ -1,6 +1,7 @@
 // import Counter from 'components/Counter';
 // import Dropdown from 'components/Dropdown';
-import ColorPicker from 'components/ColorPicker';
+// import ColorPicker from 'components/ColorPicker';
+// import TodoList from './components/TodoList/TodoList.js';
 
 const colorPickerOptions = [
     { label: 'red', color: '#F44336' },
@@ -25,7 +26,8 @@ export const App = () => {
     >
       {/* <Counter initialValue={10}/> */}
       {/* <Dropdown /> */}
-      <ColorPicker options={colorPickerOptions} />
+      {/* <ColorPicker options={colorPickerOptions} /> */}
+      {/* <TodoList /> */}
     </div>
   );
 };
