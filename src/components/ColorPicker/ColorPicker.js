@@ -27,7 +27,7 @@ class ColorPicker extends Component {
         return(
             <div className="ColorPicker">
                 <h2 className="ColorPicker__title">Color Picker</h2>
-                <p className="ColorPicker__text">Выбран цвет: {label} </p>
+                <p className="ColorPicker__text">Выбран цвет: <span className="ColorPicker__label">{label}</span></p>
                 <div className="ColorPicker__wrap">
                     {options.map(({ label, color}, index) => {
                         const optionClassName = this.makeOptionClassName(index);

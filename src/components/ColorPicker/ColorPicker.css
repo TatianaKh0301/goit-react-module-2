@@ -20,6 +20,10 @@
     margin-bottom: 20px;
 }
 
+.ColorPicker__label {
+    font-weight: bold;
+}
+
 .ColorPicker__wrap {
     display: flex;
     justify-content: space-between;
