@@ -7,7 +7,7 @@
 
 .Todo__Item {
     list-style: none;
-    padding: 20px;
+    padding: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -1,12 +1,12 @@
 import React from "react";
 import './TodoList.css';
 
-const TodoList = ( {todos} ) => (
+const TodoList = ( {todos, onDeleteTodo} ) => (
     <ul className="Todo__List">
         {todos.map(({ id, text}) => (
             <li key={id} className="Todo__Item" style={{backgroundColor: `${getRandomHexColor()}`}}>
                 <p className="Todo__Text">{text}</p>
-                <button className="Todo__Button"> Delete</button>
+                <button className="Todo__Button" onClick={() => onDeleteTodo(id)}> Delete</button>
             </li>
         ))}
     </ul>

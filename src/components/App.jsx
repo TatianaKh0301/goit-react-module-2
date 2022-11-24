@@ -35,26 +35,49 @@ import TodoList from 'components/TodoList';
 class App extends Component {
   state = {
     todos: [
-      {id: 'id-1', text: 'Выучить основы React', completed: false},
+      {id: 'id-1', text: 'Выучить основы React', completed: true},
       {id: 'id-2', text: 'Разобраться с React Router', completed: false},
       {id: 'id-3', text: 'Пережить Redux', completed: false},
   ],
   };
 
+  deleteTodo = todoId => {
+      this.setState(prevState => ({
+          todos: prevState.todos.filter(todo => todo.id !== todoId),
+      }));
+  };
+
   render() {
     const { todos } = this.state;
+
+    const totalTodo = todos.length;
+    const completedTodos = todos.reduce(
+      (acc, todo) => (todo.completed ? acc + 1 : acc), 
+      0,
+    );
+
     return (
           <div
             style={{
               height: '100vh',
+              padding: '30px',
+              margin: '0 auto',
               display: 'flex',
               justifyContent: 'center',
+              flexDirection: 'column',
               alignItems: 'center',
               fontSize: 40,
               color: '#010101'
             }}
           >
-              <TodoList todos={todos}/>
+              <div  style={{
+                  padding: 0,             
+                  fontSize: 25,
+                  }}>
+                  <p>Общее количество: <span style={{ fontWeight: 'bold',}}>{totalTodo}</span></p>
+                  <p>Количество выполненных: <span style={{ fontWeight: 'bold',}}>{completedTodos}</span></p>
+              </div>
+              <TodoList todos={todos} onDeleteTodo={this.deleteTodo}/>
           </div>
         );
   }
