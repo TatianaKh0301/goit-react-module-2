@@ -1,0 +1,26 @@
+.Todo__List {
+    background-color:bisque;
+    padding: 20px;
+    width: 800px
+}
+
+
+.Todo__Item {
+    list-style: none;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: black 1px 2px 5px 1px; 
+}
+
+.Todo__Text {
+    font-size: 30px;
+}
+
+.Todo__Button {
+    height: 50px;
+    width: 100px;
+    font-size: 20px; 
+    box-shadow: black 1px 2px 5px 1px; 
+}
