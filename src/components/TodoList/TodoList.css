@@ -5,7 +5,7 @@
 }
 
 
-.Todo__Item {
+.TodoList__item {
     list-style: none;
     padding: 5px;
     display: flex;
